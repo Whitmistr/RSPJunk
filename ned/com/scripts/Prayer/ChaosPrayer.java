@@ -25,7 +25,7 @@ import java.util.Objects;
  * @Author Ned
  */
 
-@ScriptMeta(developer = "Auschwitz Scripts", desc = "Cooks niggers", name = "Chaos altar")
+@ScriptMeta(developer = "Ned", desc = "Trains prayer at wilderness", name = "Chaos altar")
     public class ChaosPrayer extends Script implements RenderListener {
 
     private SkillTracker herblore = new SkillTracker(Skill.PRAYER);
