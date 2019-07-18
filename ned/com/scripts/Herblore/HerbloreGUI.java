@@ -28,7 +28,7 @@ public class HerbloreGUI extends JFrame {
 
 
     private String selectedOption = "None";
-    private String selectedHerb = "None"; //Initially none so the script knows when to start
+    private String selectedHerb = "None";
     private String selectedUnf = "None";
     private String selectedPotion = "None";
     private String selectedTar = "None";
@@ -37,15 +37,15 @@ public class HerbloreGUI extends JFrame {
     private static final JButton initiate = new JButton("Initiate");
 
     public HerbloreGUI() {
-        super("ned.com.scripts.Herblore Configuration"); //Set the title here, alternatively use setTitle
+        super("ned.com.scripts.Herblore Configuration"); 
         setLayout(new FlowLayout());
         setLocationRelativeTo(null);
         setSize(450, 100);
-        initiate.addActionListener(new ActionListener() { //A button that will start the script when pressed.
+        initiate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 selectedOption = String.valueOf(selectOptions.getSelectedItem());
-                selectedHerb = String.valueOf(herbOptions.getSelectedItem()); //Sets the selectedHerb variable to the string inside the box that is selected at the time.
+                selectedHerb = String.valueOf(herbOptions.getSelectedItem());
                 selectedUnf = String.valueOf(unfOptions.getSelectedItem());
                 selectedPotion = String.valueOf(potionOptions.getSelectedItem());
                 selectedTar = String.valueOf(tarOptions.getSelectedItem());
@@ -73,8 +73,7 @@ public class HerbloreGUI extends JFrame {
 
         add(initiate);
 
-        setDefaultCloseOperation(HIDE_ON_CLOSE); //Use HIDE_ON_CLOSE, because the other one (in theory) should close entire bot.
-        //pack(); //Hides initiate button on longer combobox results, function - sets size according to components.
+        setDefaultCloseOperation(HIDE_ON_CLOSE); 
     }
 
     public String getSelectedOption() {
